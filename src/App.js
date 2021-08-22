@@ -18,6 +18,8 @@ import Detail from "./pages/Detail/Detail";
 import HOC from "./pages/HOC/HOC";
 import {HomeTemplate } from './templates/HomeTemplate'
 import { UserTemplate } from "./templates/UserTemplate";
+import AntDemo from "./pages/AntDemo/AntDemo";
+import { AdminTemplate } from "./templates/AdminTemplate";
 function App() {
   return (
     <BrowserRouter>
@@ -28,6 +30,7 @@ function App() {
           <UserTemplate exact path="/login" component={Login} />
           <HomeTemplate exact path="/about" component={About} />
           <UserTemplate exact path="/register" component={Register} />
+          {/* <HomeTemplate exact path="/antd" component={AntDemo} /> */}
           <HomeTemplate exact path="/usestate" component={UseStateDemo} />
           <HomeTemplate exact path="/useeffect" component={UseEffectDemo} />
           {/* <Route exact path="/reduxhook" component={ReduxHookDemo} /> */}
@@ -37,6 +40,8 @@ function App() {
           <HomeTemplate exact path="/detail/:id" component={Detail} />
           <HomeTemplate exact path="/" component={Home} />
           <HomeTemplate exact path="/hoc" component={HOC} />
+
+          <AdminTemplate path="/antd" component={AntDemo} />
       </Switch>
     </BrowserRouter>
   );
